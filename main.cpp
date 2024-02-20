@@ -4,6 +4,7 @@
 #include <random>
 #include <fmt/core.h>
 #include <fstream>
+#include <SFML/Graphics.hpp>
 
 
 #include <chrono>
@@ -83,6 +84,63 @@ std::vector<int> frecuenciasOMP(const int *a, const int n){
     return datos;
 }
 
+void drawHistogram(const std::vector<int>& frequencies) {
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Histograma");
+
+    sf::Font font;
+    if (!font.loadFromFile("arial.ttf")) {
+        std::cerr << "Error cargando la fuente Arial" << std::endl;
+        return;
+    }
+
+    sf::Text text;
+    text.setFont(font);
+    text.setCharacterSize(20);
+    text.setFillColor(sf::Color::White);
+
+    std::vector<sf::RectangleShape> bars;
+
+    for (int i = 0; i < 256; ++i) {
+        sf::RectangleShape bar(sf::Vector2f(2, frequencies[i] * 0.1)); // Ajuste el factor multiplicador para cambiar la altura
+        // Colores diferentes para cada barra
+        bar.setFillColor(sf::Color(i, 100, 200)); // Ajusta los valores de color según tu preferencia
+        bar.setPosition(i * 3, 600 - frequencies[i] * 0.1); // Ajuste el factor multiplicador aquí también
+        bars.push_back(bar);
+    }
+
+    // Escala en el lado derecho del gráfico
+    for (int i = 0; i <= 10; ++i) {
+        sf::RectangleShape scale(sf::Vector2f(10, 2));
+        scale.setFillColor(sf::Color::White);
+        scale.setPosition(790, 600 - i * 50);
+        window.draw(scale);
+
+        sf::Text scaleText;
+        scaleText.setFont(font);
+        scaleText.setCharacterSize(15);
+        scaleText.setFillColor(sf::Color::White);
+        scaleText.setString(fmt::format("{}", i * 500));
+        scaleText.setPosition(810, 600 - i * 50);
+        window.draw(scaleText);
+    }
+
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            }
+        }
+
+        window.clear(sf::Color::Black);
+
+        for (const auto& bar : bars) {
+            window.draw(bar);
+        }
+
+        window.display();
+    }
+}
 
 int main() {
 
@@ -110,6 +168,8 @@ int main() {
     for (int i = 0; i < 256; ++i) {
         fmt::println("[{}] - [{}]", i, frecuenciaOMP[i]);
     }
+
+    drawHistogram(frecuenciaOMP);
 
     //GENERAR txt de datos
 //    std::ofstream archivo("C:\\Users\\josue\\Desktop\\Universidad\\ProgParalela\\Grupal_final\\numeros13.txt");

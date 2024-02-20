@@ -47,11 +47,12 @@ cmake_ninja_workdir = C$:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-releas
 #############################################
 # Order-only phony target for Grupo1_pp
 
-build cmake_object_order_depends_target_Grupo1_pp: phony || cmake_object_order_depends_target_fmt
+build cmake_object_order_depends_target_Grupo1_pp: phony || CMakeFiles\Grupo1_pp.dir
 
 build CMakeFiles\Grupo1_pp.dir\main.cpp.obj: CXX_COMPILER__Grupo1_pp_unscanned_Release C$:\Users\josue\CLionProjects\Grupo1_pp\main.cpp || cmake_object_order_depends_target_Grupo1_pp
+  DEFINES = -DAL_LIBTYPE_STATIC -DFLAC__NO_DLL -DSFML_STATIC
   FLAGS = /DWIN32 /D_WINDOWS /EHsc -fopenmp /O2 /Ob2 /DNDEBUG -std:c++17 -MD
-  INCLUDES = -IC:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-src\include
+  INCLUDES = -external:IC:\Users\josue\.conan2\p\fmtb9171ef78b3a6\p\include -external:IC:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\include -external:W0
   OBJECT_DIR = CMakeFiles\Grupo1_pp.dir
   OBJECT_FILE_DIR = CMakeFiles\Grupo1_pp.dir
   TARGET_COMPILE_PDB = CMakeFiles\Grupo1_pp.dir\
@@ -65,10 +66,11 @@ build CMakeFiles\Grupo1_pp.dir\main.cpp.obj: CXX_COMPILER__Grupo1_pp_unscanned_R
 #############################################
 # Link the executable Grupo1_pp.exe
 
-build Grupo1_pp.exe: CXX_EXECUTABLE_LINKER__Grupo1_pp_Release CMakeFiles\Grupo1_pp.dir\main.cpp.obj | _deps\fmt-build\fmt.lib || _deps\fmt-build\fmt.lib
+build Grupo1_pp.exe: CXX_EXECUTABLE_LINKER__Grupo1_pp_Release CMakeFiles\Grupo1_pp.dir\main.cpp.obj | C$:\Users\josue\.conan2\p\fmtb9171ef78b3a6\p\lib\fmt.lib C$:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-audio-s.lib C$:\Users\josue\.conan2\p\flac48157a3b5e13b\p\lib\FLAC++.lib C$:\Users\josue\.conan2\p\flac48157a3b5e13b\p\lib\FLAC.lib C$:\Users\josue\.conan2\p\opena23fd44b9c9a9e\p\lib\OpenAL32.lib C$:\Users\josue\.conan2\p\vorbib3b87ba3196b8\p\lib\vorbisfile.lib C$:\Users\josue\.conan2\p\vorbib3b87ba3196b8\p\lib\vorbisenc.lib C$:\Users\josue\.conan2\p\vorbib3b87ba3196b8\p\lib\vorbis.lib C$:\Users\josue\.conan2\p\ogg0603e0d7ed2e4\p\lib\ogg.lib C$:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-network-s.lib C$:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-graphics-s.lib C$:\Users\josue\.conan2\p\freetb67fa9613c628\p\lib\freetype.lib C$:\Users\josue\.conan2\p\libpndb3c6d0c34302\p\lib\libpng16_static.lib C$:\Users\josue\.conan2\p\zlib9d72e7d21adc5\p\lib\zlib.lib C$:\Users\josue\.conan2\p\bzip2e06444d88ab4f\p\lib\bz2.lib C$:\Users\josue\.conan2\p\brotl79757a5cae055\p\lib\brotlienc.lib C$:\Users\josue\.conan2\p\brotl79757a5cae055\p\lib\brotlidec.lib C$:\Users\josue\.conan2\p\brotl79757a5cae055\p\lib\brotlicommon.lib C$:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-window-s.lib C$:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-main.lib C$:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-system-s.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc -fopenmp /O2 /Ob2 /DNDEBUG -MD
   LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
-  LINK_LIBRARIES = _deps\fmt-build\fmt.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = C:\Users\josue\.conan2\p\fmtb9171ef78b3a6\p\lib\fmt.lib  C:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-audio-s.lib  C:\Users\josue\.conan2\p\flac48157a3b5e13b\p\lib\FLAC++.lib  C:\Users\josue\.conan2\p\flac48157a3b5e13b\p\lib\FLAC.lib  C:\Users\josue\.conan2\p\opena23fd44b9c9a9e\p\lib\OpenAL32.lib  ole32.lib  shell32.lib  user32.lib  C:\Users\josue\.conan2\p\vorbib3b87ba3196b8\p\lib\vorbisfile.lib  C:\Users\josue\.conan2\p\vorbib3b87ba3196b8\p\lib\vorbisenc.lib  C:\Users\josue\.conan2\p\vorbib3b87ba3196b8\p\lib\vorbis.lib  C:\Users\josue\.conan2\p\ogg0603e0d7ed2e4\p\lib\ogg.lib  C:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-network-s.lib  ws2_32.lib  C:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-graphics-s.lib  C:\Users\josue\.conan2\p\freetb67fa9613c628\p\lib\freetype.lib  C:\Users\josue\.conan2\p\libpndb3c6d0c34302\p\lib\libpng16_static.lib  C:\Users\josue\.conan2\p\zlib9d72e7d21adc5\p\lib\zlib.lib  C:\Users\josue\.conan2\p\bzip2e06444d88ab4f\p\lib\bz2.lib  C:\Users\josue\.conan2\p\brotl79757a5cae055\p\lib\brotlienc.lib  C:\Users\josue\.conan2\p\brotl79757a5cae055\p\lib\brotlidec.lib  C:\Users\josue\.conan2\p\brotl79757a5cae055\p\lib\brotlicommon.lib  C:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-window-s.lib  gdi32.lib  opengl32.lib  C:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-main.lib  C:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib\sfml-system-s.lib  winmm.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_PATH = -LIBPATH:C:\Users\josue\.conan2\p\fmtb9171ef78b3a6\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\sfmlc4c41066e45ff\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\flac48157a3b5e13b\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\ogg0603e0d7ed2e4\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\opena23fd44b9c9a9e\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\vorbib3b87ba3196b8\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\freetb67fa9613c628\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\libpndb3c6d0c34302\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\zlib9d72e7d21adc5\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\bzip2e06444d88ab4f\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\brotl79757a5cae055\p\lib
   OBJECT_DIR = CMakeFiles\Grupo1_pp.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -136,145 +138,10 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
-
-#############################################
-# Utility command for list_install_components
-
-build list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build CMakeFiles\install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build install: phony CMakeFiles\install.util
-
-
-#############################################
-# Utility command for install/local
-
-build CMakeFiles\install\local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build install\local: phony CMakeFiles\install\local.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# C:/Users/josue/CLionProjects/Grupo1_pp/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target fmt
-
-
-#############################################
-# Order-only phony target for fmt
-
-build cmake_object_order_depends_target_fmt: phony || _deps\fmt-build\CMakeFiles\fmt.dir
-
-build _deps\fmt-build\CMakeFiles\fmt.dir\src\format.cc.obj: CXX_COMPILER__fmt_unscanned_Release C$:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-src\src\format.cc || cmake_object_order_depends_target_fmt
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD
-  INCLUDES = -IC:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-src\include
-  OBJECT_DIR = _deps\fmt-build\CMakeFiles\fmt.dir
-  OBJECT_FILE_DIR = _deps\fmt-build\CMakeFiles\fmt.dir\src
-  TARGET_COMPILE_PDB = _deps\fmt-build\CMakeFiles\fmt.dir\fmt.pdb
-  TARGET_PDB = _deps\fmt-build\fmt.pdb
-
-build _deps\fmt-build\CMakeFiles\fmt.dir\src\os.cc.obj: CXX_COMPILER__fmt_unscanned_Release C$:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-src\src\os.cc || cmake_object_order_depends_target_fmt
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD
-  INCLUDES = -IC:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-src\include
-  OBJECT_DIR = _deps\fmt-build\CMakeFiles\fmt.dir
-  OBJECT_FILE_DIR = _deps\fmt-build\CMakeFiles\fmt.dir\src
-  TARGET_COMPILE_PDB = _deps\fmt-build\CMakeFiles\fmt.dir\fmt.pdb
-  TARGET_PDB = _deps\fmt-build\fmt.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target fmt
-
-
-#############################################
-# Link the static library _deps\fmt-build\fmt.lib
-
-build _deps\fmt-build\fmt.lib: CXX_STATIC_LIBRARY_LINKER__fmt_Release _deps\fmt-build\CMakeFiles\fmt.dir\src\format.cc.obj _deps\fmt-build\CMakeFiles\fmt.dir\src\os.cc.obj
-  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
-  LINK_FLAGS = /machine:x64
-  OBJECT_DIR = _deps\fmt-build\CMakeFiles\fmt.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = _deps\fmt-build\CMakeFiles\fmt.dir\fmt.pdb
-  TARGET_FILE = _deps\fmt-build\fmt.lib
-  TARGET_PDB = _deps\fmt-build\fmt.pdb
-
-
-#############################################
-# Utility command for edit_cache
-
-build _deps\fmt-build\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-build && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build _deps\fmt-build\edit_cache: phony _deps\fmt-build\CMakeFiles\edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build _deps\fmt-build\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-build && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\josue\CLionProjects\Grupo1_pp -BC:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build _deps\fmt-build\rebuild_cache: phony _deps\fmt-build\CMakeFiles\rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build _deps\fmt-build\list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build _deps\fmt-build\CMakeFiles\install.util: CUSTOM_COMMAND _deps\fmt-build\all
-  COMMAND = cmd.exe /C "cd /D C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-build && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build _deps\fmt-build\install: phony _deps\fmt-build\CMakeFiles\install.util
-
-
-#############################################
-# Utility command for install/local
-
-build _deps\fmt-build\CMakeFiles\install\local.util: CUSTOM_COMMAND _deps\fmt-build\all
-  COMMAND = cmd.exe /C "cd /D C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release\_deps\fmt-build && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build _deps\fmt-build\install\local: phony _deps\fmt-build\CMakeFiles\install\local.util
-
 # =============================================================================
 # Target aliases.
 
 build Grupo1_pp: phony Grupo1_pp.exe
-
-build fmt: phony _deps\fmt-build\fmt.lib
-
-build fmt.lib: phony _deps\fmt-build\fmt.lib
 
 build practica: phony practica.exe
 
@@ -286,14 +153,7 @@ build practica: phony practica.exe
 #############################################
 # Folder: C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release
 
-build all: phony Grupo1_pp.exe practica.exe _deps\fmt-build\all
-
-# =============================================================================
-
-#############################################
-# Folder: C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/_deps/fmt-build
-
-build _deps\fmt-build\all: phony _deps\fmt-build\fmt.lib
+build all: phony Grupo1_pp.exe practica.exe
 
 # =============================================================================
 # Built-in targets
@@ -302,14 +162,14 @@ build _deps\fmt-build\all: phony _deps\fmt-build\fmt.lib
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeParseArguments.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FetchContent.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FetchContent\CMakeLists.cmake.in C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindGit.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\GNUInstallDirs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake C$:\Users\josue\CLionProjects\Grupo1_pp\CMakeLists.txt CMakeCache.txt CMakeFiles\3.26.4\CMakeCCompiler.cmake CMakeFiles\3.26.4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4\CMakeRCCompiler.cmake CMakeFiles\3.26.4\CMakeSystem.cmake _deps\fmt-src\CMakeLists.txt _deps\fmt-src\support\cmake\JoinPaths.cmake _deps\fmt-src\support\cmake\fmt-config.cmake.in _deps\fmt-src\support\cmake\fmt.pc.in
+build build.ninja: RERUN_CMAKE | C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Users\josue\.conan2\p\bzip2e06444d88ab4f\p\lib\cmake\conan-official-bzip2-variables.cmake C$:\Users\josue\.conan2\p\freetb67fa9613c628\p\lib\cmake\conan-official-freetype-variables.cmake C$:\Users\josue\.conan2\p\opena23fd44b9c9a9e\p\lib\cmake\conan-official-openal-soft-variables.cmake C$:\Users\josue\CLionProjects\Grupo1_pp\CMakeLists.txt C$:\Users\josue\CLionProjects\Grupo1_pp\conan_provider.cmake C$:\Users\josue\CLionProjects\Grupo1_pp\conanfile.py CMakeCache.txt CMakeFiles\3.26.4\CMakeCCompiler.cmake CMakeFiles\3.26.4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4\CMakeRCCompiler.cmake CMakeFiles\3.26.4\CMakeSystem.cmake conan\build\Release\generators\BZip2-Target-release.cmake conan\build\Release\generators\BZip2-release-x86_64-data.cmake conan\build\Release\generators\BZip2Config.cmake conan\build\Release\generators\BZip2ConfigVersion.cmake conan\build\Release\generators\BZip2Targets.cmake conan\build\Release\generators\Ogg-Target-release.cmake conan\build\Release\generators\Ogg-release-x86_64-data.cmake conan\build\Release\generators\OggConfig.cmake conan\build\Release\generators\OggConfigVersion.cmake conan\build\Release\generators\OggTargets.cmake conan\build\Release\generators\OpenAL-Target-release.cmake conan\build\Release\generators\OpenAL-release-x86_64-data.cmake conan\build\Release\generators\OpenALConfig.cmake conan\build\Release\generators\OpenALConfigVersion.cmake conan\build\Release\generators\OpenALTargets.cmake conan\build\Release\generators\PNG-Target-release.cmake conan\build\Release\generators\PNG-release-x86_64-data.cmake conan\build\Release\generators\PNGConfig.cmake conan\build\Release\generators\PNGConfigVersion.cmake conan\build\Release\generators\PNGTargets.cmake conan\build\Release\generators\SFML-Target-release.cmake conan\build\Release\generators\SFML-release-x86_64-data.cmake conan\build\Release\generators\SFMLConfig.cmake conan\build\Release\generators\SFMLConfigVersion.cmake conan\build\Release\generators\SFMLTargets.cmake conan\build\Release\generators\Vorbis-Target-release.cmake conan\build\Release\generators\Vorbis-release-x86_64-data.cmake conan\build\Release\generators\VorbisConfig.cmake conan\build\Release\generators\VorbisConfigVersion.cmake conan\build\Release\generators\VorbisTargets.cmake conan\build\Release\generators\ZLIB-Target-release.cmake conan\build\Release\generators\ZLIB-release-x86_64-data.cmake conan\build\Release\generators\ZLIBConfig.cmake conan\build\Release\generators\ZLIBConfigVersion.cmake conan\build\Release\generators\ZLIBTargets.cmake conan\build\Release\generators\brotli-Target-release.cmake conan\build\Release\generators\brotli-config-version.cmake conan\build\Release\generators\brotli-config.cmake conan\build\Release\generators\brotli-release-x86_64-data.cmake conan\build\Release\generators\brotliTargets.cmake conan\build\Release\generators\cmakedeps_macros.cmake conan\build\Release\generators\flac-Target-release.cmake conan\build\Release\generators\flac-config-version.cmake conan\build\Release\generators\flac-config.cmake conan\build\Release\generators\flac-release-x86_64-data.cmake conan\build\Release\generators\flacTargets.cmake conan\build\Release\generators\fmt-Target-release.cmake conan\build\Release\generators\fmt-config-version.cmake conan\build\Release\generators\fmt-config.cmake conan\build\Release\generators\fmt-release-x86_64-data.cmake conan\build\Release\generators\fmtTargets.cmake conan\build\Release\generators\freetype-Target-release.cmake conan\build\Release\generators\freetype-config-version.cmake conan\build\Release\generators\freetype-config.cmake conan\build\Release\generators\freetype-release-x86_64-data.cmake conan\build\Release\generators\freetypeTargets.cmake conan\build\Release\generators\opengl_system-Target-release.cmake conan\build\Release\generators\opengl_system-config-version.cmake conan\build\Release\generators\opengl_system-config.cmake conan\build\Release\generators\opengl_system-release-x86_64-data.cmake conan\build\Release\generators\opengl_systemTargets.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeParseArguments.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FetchContent.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FetchContent\CMakeLists.cmake.in C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindGit.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\GNUInstallDirs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake C$:\Users\josue\CLionProjects\Grupo1_pp\CMakeLists.txt CMakeCache.txt CMakeFiles\3.26.4\CMakeCCompiler.cmake CMakeFiles\3.26.4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4\CMakeRCCompiler.cmake CMakeFiles\3.26.4\CMakeSystem.cmake _deps\fmt-src\CMakeLists.txt _deps\fmt-src\support\cmake\JoinPaths.cmake _deps\fmt-src\support\cmake\fmt-config.cmake.in _deps\fmt-src\support\cmake\fmt.pc.in: phony
+build C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Users\josue\.conan2\p\bzip2e06444d88ab4f\p\lib\cmake\conan-official-bzip2-variables.cmake C$:\Users\josue\.conan2\p\freetb67fa9613c628\p\lib\cmake\conan-official-freetype-variables.cmake C$:\Users\josue\.conan2\p\opena23fd44b9c9a9e\p\lib\cmake\conan-official-openal-soft-variables.cmake C$:\Users\josue\CLionProjects\Grupo1_pp\CMakeLists.txt C$:\Users\josue\CLionProjects\Grupo1_pp\conan_provider.cmake C$:\Users\josue\CLionProjects\Grupo1_pp\conanfile.py CMakeCache.txt CMakeFiles\3.26.4\CMakeCCompiler.cmake CMakeFiles\3.26.4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4\CMakeRCCompiler.cmake CMakeFiles\3.26.4\CMakeSystem.cmake conan\build\Release\generators\BZip2-Target-release.cmake conan\build\Release\generators\BZip2-release-x86_64-data.cmake conan\build\Release\generators\BZip2Config.cmake conan\build\Release\generators\BZip2ConfigVersion.cmake conan\build\Release\generators\BZip2Targets.cmake conan\build\Release\generators\Ogg-Target-release.cmake conan\build\Release\generators\Ogg-release-x86_64-data.cmake conan\build\Release\generators\OggConfig.cmake conan\build\Release\generators\OggConfigVersion.cmake conan\build\Release\generators\OggTargets.cmake conan\build\Release\generators\OpenAL-Target-release.cmake conan\build\Release\generators\OpenAL-release-x86_64-data.cmake conan\build\Release\generators\OpenALConfig.cmake conan\build\Release\generators\OpenALConfigVersion.cmake conan\build\Release\generators\OpenALTargets.cmake conan\build\Release\generators\PNG-Target-release.cmake conan\build\Release\generators\PNG-release-x86_64-data.cmake conan\build\Release\generators\PNGConfig.cmake conan\build\Release\generators\PNGConfigVersion.cmake conan\build\Release\generators\PNGTargets.cmake conan\build\Release\generators\SFML-Target-release.cmake conan\build\Release\generators\SFML-release-x86_64-data.cmake conan\build\Release\generators\SFMLConfig.cmake conan\build\Release\generators\SFMLConfigVersion.cmake conan\build\Release\generators\SFMLTargets.cmake conan\build\Release\generators\Vorbis-Target-release.cmake conan\build\Release\generators\Vorbis-release-x86_64-data.cmake conan\build\Release\generators\VorbisConfig.cmake conan\build\Release\generators\VorbisConfigVersion.cmake conan\build\Release\generators\VorbisTargets.cmake conan\build\Release\generators\ZLIB-Target-release.cmake conan\build\Release\generators\ZLIB-release-x86_64-data.cmake conan\build\Release\generators\ZLIBConfig.cmake conan\build\Release\generators\ZLIBConfigVersion.cmake conan\build\Release\generators\ZLIBTargets.cmake conan\build\Release\generators\brotli-Target-release.cmake conan\build\Release\generators\brotli-config-version.cmake conan\build\Release\generators\brotli-config.cmake conan\build\Release\generators\brotli-release-x86_64-data.cmake conan\build\Release\generators\brotliTargets.cmake conan\build\Release\generators\cmakedeps_macros.cmake conan\build\Release\generators\flac-Target-release.cmake conan\build\Release\generators\flac-config-version.cmake conan\build\Release\generators\flac-config.cmake conan\build\Release\generators\flac-release-x86_64-data.cmake conan\build\Release\generators\flacTargets.cmake conan\build\Release\generators\fmt-Target-release.cmake conan\build\Release\generators\fmt-config-version.cmake conan\build\Release\generators\fmt-config.cmake conan\build\Release\generators\fmt-release-x86_64-data.cmake conan\build\Release\generators\fmtTargets.cmake conan\build\Release\generators\freetype-Target-release.cmake conan\build\Release\generators\freetype-config-version.cmake conan\build\Release\generators\freetype-config.cmake conan\build\Release\generators\freetype-release-x86_64-data.cmake conan\build\Release\generators\freetypeTargets.cmake conan\build\Release\generators\opengl_system-Target-release.cmake conan\build\Release\generators\opengl_system-config-version.cmake conan\build\Release\generators\opengl_system-config.cmake conan\build\Release\generators\opengl_system-release-x86_64-data.cmake conan\build\Release\generators\opengl_systemTargets.cmake: phony
 
 
 #############################################

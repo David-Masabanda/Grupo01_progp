@@ -1,0 +1,3 @@
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/_deps/fmt-subbuild/CMakeFiles/fmt-populate.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/_deps/fmt-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/_deps/fmt-subbuild/CMakeFiles/rebuild_cache.dir

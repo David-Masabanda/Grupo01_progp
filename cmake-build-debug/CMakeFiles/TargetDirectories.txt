@@ -1,0 +1,13 @@
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/CMakeFiles/Grupo1_pp.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/CMakeFiles/practica.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/CMakeFiles/list_install_components.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/CMakeFiles/install.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/CMakeFiles/install/local.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/_deps/fmt-build/CMakeFiles/fmt.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/_deps/fmt-build/CMakeFiles/edit_cache.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/_deps/fmt-build/CMakeFiles/rebuild_cache.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/_deps/fmt-build/CMakeFiles/list_install_components.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/_deps/fmt-build/CMakeFiles/install.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug/_deps/fmt-build/CMakeFiles/install/local.dir

@@ -1,0 +1,15 @@
+# ninja log v5
+1	542	7300955963611517	CMakeFiles/Grupo1_pp.dir/main.cpp.obj	4a5ef198af2fb805
+0	440	7299193724572273	CMakeFiles/practica.dir/practica.cpp.obj	1403cefd0949d6ed
+543	734	7300955965303814	Grupo1_pp.exe	6895a3fae9bdae2a
+11	744	7299084893910343	_deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.obj	c46001fd1dd51ae6
+18	1420	7299084900570871	_deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.obj	3695e6b540996558
+1421	1509	7299084901549914	_deps/fmt-build/fmt.lib	d2fe71932ad4c45b
+1	410	7299191106785266	CMakeFiles/Grupo1_pp.dir/practica.cpp.obj	46f2290eefcc4e2a
+441	613	7299193726063619	practica.exe	6a8706fe3df8d133
+1	698	7300968505900166	CMakeFiles/Grupo1_pp.dir/main.cpp.obj	4a5ef198af2fb805
+698	898	7300968507716825	Grupo1_pp.exe	6895a3fae9bdae2a
+1	517	7300968611748749	CMakeFiles/Grupo1_pp.dir/main.cpp.obj	4a5ef198af2fb805
+517	682	7300968613205664	Grupo1_pp.exe	6895a3fae9bdae2a
+0	535	7300972586747054	CMakeFiles/Grupo1_pp.dir/main.cpp.obj	4a5ef198af2fb805
+535	705	7300972588258380	Grupo1_pp.exe	6895a3fae9bdae2a

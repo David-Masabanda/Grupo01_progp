@@ -5,13 +5,13 @@
 #include <fmt/core.h>
 #include <fstream>
 #include <SFML/Graphics.hpp>
-
+#include <cmath>
 
 #include <chrono>
 namespace ch=std::chrono;
 
 #define MAX_NUMEROS 90000
-
+#define GRUPOS 10
 
 std::vector<int> randomicos(){
     std::random_device rd;
@@ -27,7 +27,7 @@ std::vector<int> randomicos(){
 }
 
 std::vector<int> read_file() {
-    std::fstream fs("C:/Users/josue/Desktop/Universidad/ProgParalela/Grupal_final/datos4.txt", std::ios::in);
+    std::fstream fs("C:/Users/josue/Desktop/Universidad/ProgParalela/Grupal_final/datos1.txt", std::ios::in);
     std::string line;
     std::vector<int> ret;
     while (std::getline(fs, line)) {
@@ -38,9 +38,11 @@ std::vector<int> read_file() {
 }
 
 std::vector<int> frecuencias(const int *a, const int n){
-    fmt::print("Valor - Frecuencia\n");
+
+    int block=std::ceil((double)255/GRUPOS);
     int contador=0;
     std::vector<int> datos (255);
+    std::vector<int> datosFinal (GRUPOS);
 
     for (int i = 0; i < 256; ++i) {
         for (int j = 0; j < n; ++j) {
@@ -49,13 +51,62 @@ std::vector<int> frecuencias(const int *a, const int n){
             }
         }
         datos[i]=contador;
-        fmt::print("[{}] - [{}]\n",i,contador);
         contador=0;
     }
-    return datos;
+
+    int indice= 0;
+    fmt::println("Grupo - Frecuencia");
+    for (int i = 0; i < GRUPOS; ++i) {
+        int suma = 0;
+        for (int j = 0; j < block; ++j) {
+            if (indice<256){
+                suma += datos[indice++];
+            }
+        }
+        datosFinal[i] = suma;
+        fmt::println("[{}], [{}]", i, suma);
+    }
+
+    return datosFinal;
 }
 
 std::vector<int> frecuenciasOMP(const int *a, const int n){
+    std::vector<int> datos (GRUPOS);
+    int block=std::ceil((double)255/GRUPOS);
+
+    #pragma omp parallel default(none) shared (a, n, datos, block)
+    {
+        std::vector<int> tmp_datos (GRUPOS);
+
+        int start;
+        int end;
+        #pragma omp for
+
+        for (int i = 0; i <GRUPOS ; ++i) {
+            int tmp_contador=0;
+            start=(i*block);
+            end = (i == GRUPOS - 1) ? 256 : (start + block);
+
+            for (int j = 0; j < n; ++j) {
+                if (a[j]>=start && a[j]<end){
+                    tmp_contador++;
+                }
+            }
+            tmp_datos[i]=tmp_contador;
+        }
+
+        #pragma omp critical
+        {
+            for (int i = 0; i < GRUPOS; i++) {
+                datos[i] +=  tmp_datos[i];
+            }
+        }
+    }
+
+    return datos;
+}
+
+std::vector<int> frecuenciasOMP2(const int *a, const int n){
     std::vector<int> datos (256);
 
     #pragma omp parallel default(none) shared (a, n, datos)
@@ -165,11 +216,18 @@ int main() {
     fmt::println("Tiempo Paralelo: {}ms", tiempo1.count());
 
     fmt::print("Valor - Frecuencia\n");
-    for (int i = 0; i < 256; ++i) {
+
+
+    for (int i = 0; i < GRUPOS; ++i) {
         fmt::println("[{}] - [{}]", i, frecuenciaOMP[i]);
     }
 
-    drawHistogram(frecuenciaOMP);
+//    std::vector<int> frecuenciaOMP2= frecuenciasOMP2(datosRandom.data(), datosRandom.size());
+//
+//    for (int i = 0; i < 256; ++i) {
+//        fmt::println("[{}] - [{}]", i, frecuenciaOMP2[i]);
+//    }
+    //drawHistogram(frecuenciaOMP);
 
     //GENERAR txt de datos
 //    std::ofstream archivo("C:\\Users\\josue\\Desktop\\Universidad\\ProgParalela\\Grupal_final\\numeros13.txt");

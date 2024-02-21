@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.26"
@@ -20,7 +20,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -40,16 +40,16 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Grupo1_pp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Grupo1_pp-Debug-ba33d80792b2c9ebfa33.json",
-					"name" : "Grupo1_pp",
+					"id" : "Ejercicio1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ejercicio1-Release-1ccc61c0393c69d40f93.json",
+					"name" : "Ejercicio1",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "practica::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-practica-Debug-8b9a4344325864d8307c.json",
-					"name" : "practica",
+					"id" : "Ejercicio2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ejercicio2-Release-b8f6276f368cfcb21a03.json",
+					"name" : "Ejercicio2",
 					"projectIndex" : 0
 				}
 			]
@@ -58,7 +58,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug",
+		"build" : "C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release",
 		"source" : "C:/Users/josue/CLionProjects/Grupo1_pp"
 	},
 	"version" : 

@@ -1,4 +1,4 @@
-C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/CMakeFiles/Grupo1_pp.dir
-C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/CMakeFiles/practica.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/CMakeFiles/Ejercicio1.dir
+C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/CMakeFiles/Ejercicio2.dir
 C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/CMakeFiles/edit_cache.dir
 C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release/CMakeFiles/rebuild_cache.dir

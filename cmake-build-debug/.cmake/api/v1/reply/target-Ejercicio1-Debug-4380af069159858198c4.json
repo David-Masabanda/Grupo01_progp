@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Grupo1_pp.exe"
+			"path" : "Ejercicio1.exe"
 		},
 		{
-			"path" : "Grupo1_pp.pdb"
+			"path" : "Ejercicio1.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -76,7 +76,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 14,
+				"line" : 15,
 				"parent" : 0
 			},
 			{
@@ -775,7 +775,7 @@
 			]
 		}
 	],
-	"id" : "Grupo1_pp::@6890427a1f51a3e7e1df",
+	"id" : "Ejercicio1::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -990,8 +990,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Grupo1_pp",
-	"nameOnDisk" : "Grupo1_pp.exe",
+	"name" : "Ejercicio1",
+	"nameOnDisk" : "Ejercicio1.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -1012,7 +1012,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "Ejercicio1.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

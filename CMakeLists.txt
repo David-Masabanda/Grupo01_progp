@@ -10,9 +10,16 @@ find_package(SFML)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 
 
-add_executable(Grupo1_pp main.cpp)
-target_link_libraries(Grupo1_pp fmt::fmt sfml::sfml)
+add_executable(Ejercicio1 Ejercicio1.cpp)
 
-add_executable(practica practica.cpp)
+target_link_libraries(Ejercicio1 fmt::fmt sfml::sfml)
+
+
+
+
+add_executable(Ejercicio2 Ejercicio2.cpp)
+
+target_link_libraries(Ejercicio2 fmt::fmt)
+
 
 

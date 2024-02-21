@@ -41,79 +41,81 @@ include CMakeFiles\rules.ninja
 
 cmake_ninja_workdir = C$:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-debug\
 # =============================================================================
-# Object build statements for EXECUTABLE target Grupo1_pp
+# Object build statements for EXECUTABLE target Ejercicio1
 
 
 #############################################
-# Order-only phony target for Grupo1_pp
+# Order-only phony target for Ejercicio1
 
-build cmake_object_order_depends_target_Grupo1_pp: phony || CMakeFiles\Grupo1_pp.dir
+build cmake_object_order_depends_target_Ejercicio1: phony || CMakeFiles\Ejercicio1.dir
 
-build CMakeFiles\Grupo1_pp.dir\main.cpp.obj: CXX_COMPILER__Grupo1_pp_unscanned_Debug C$:\Users\josue\CLionProjects\Grupo1_pp\main.cpp || cmake_object_order_depends_target_Grupo1_pp
+build CMakeFiles\Ejercicio1.dir\Ejercicio1.cpp.obj: CXX_COMPILER__Ejercicio1_unscanned_Debug C$:\Users\josue\CLionProjects\Grupo1_pp\Ejercicio1.cpp || cmake_object_order_depends_target_Ejercicio1
   DEFINES = -DAL_LIBTYPE_STATIC -DFLAC__NO_DLL -DSFML_STATIC
   FLAGS = /DWIN32 /D_WINDOWS /EHsc -fopenmp /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi
   INCLUDES = -external:IC:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\include -external:IC:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\include -external:W0
-  OBJECT_DIR = CMakeFiles\Grupo1_pp.dir
-  OBJECT_FILE_DIR = CMakeFiles\Grupo1_pp.dir
-  TARGET_COMPILE_PDB = CMakeFiles\Grupo1_pp.dir\
-  TARGET_PDB = Grupo1_pp.pdb
+  OBJECT_DIR = CMakeFiles\Ejercicio1.dir
+  OBJECT_FILE_DIR = CMakeFiles\Ejercicio1.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Ejercicio1.dir\
+  TARGET_PDB = Ejercicio1.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Grupo1_pp
+# Link build statements for EXECUTABLE target Ejercicio1
 
 
 #############################################
-# Link the executable Grupo1_pp.exe
+# Link the executable Ejercicio1.exe
 
-build Grupo1_pp.exe: CXX_EXECUTABLE_LINKER__Grupo1_pp_Debug CMakeFiles\Grupo1_pp.dir\main.cpp.obj | C$:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\lib\fmtd.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-audio-s-d.lib C$:\Users\josue\.conan2\p\b\flac7bbe0d9471d59\p\lib\FLAC++.lib C$:\Users\josue\.conan2\p\b\flac7bbe0d9471d59\p\lib\FLAC.lib C$:\Users\josue\.conan2\p\b\opena96111ba1723d9\p\lib\OpenAL32.lib C$:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbisfile.lib C$:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbisenc.lib C$:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbis.lib C$:\Users\josue\.conan2\p\b\ogg9951fef9d6731\p\lib\ogg.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-network-s-d.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-graphics-s-d.lib C$:\Users\josue\.conan2\p\b\freet2b86c301a62be\p\lib\freetyped.lib C$:\Users\josue\.conan2\p\b\libpnc034e3a817d1e\p\lib\libpng16_staticd.lib C$:\Users\josue\.conan2\p\b\zlib8a32b8641962a\p\lib\zlib.lib C$:\Users\josue\.conan2\p\b\bzip2d244b99275fd5\p\lib\bz2.lib C$:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlienc.lib C$:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlidec.lib C$:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlicommon.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-window-s-d.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-main-d.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-system-s-d.lib
+build Ejercicio1.exe: CXX_EXECUTABLE_LINKER__Ejercicio1_Debug CMakeFiles\Ejercicio1.dir\Ejercicio1.cpp.obj | C$:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\lib\fmtd.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-audio-s-d.lib C$:\Users\josue\.conan2\p\b\flac7bbe0d9471d59\p\lib\FLAC++.lib C$:\Users\josue\.conan2\p\b\flac7bbe0d9471d59\p\lib\FLAC.lib C$:\Users\josue\.conan2\p\b\opena96111ba1723d9\p\lib\OpenAL32.lib C$:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbisfile.lib C$:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbisenc.lib C$:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbis.lib C$:\Users\josue\.conan2\p\b\ogg9951fef9d6731\p\lib\ogg.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-network-s-d.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-graphics-s-d.lib C$:\Users\josue\.conan2\p\b\freet2b86c301a62be\p\lib\freetyped.lib C$:\Users\josue\.conan2\p\b\libpnc034e3a817d1e\p\lib\libpng16_staticd.lib C$:\Users\josue\.conan2\p\b\zlib8a32b8641962a\p\lib\zlib.lib C$:\Users\josue\.conan2\p\b\bzip2d244b99275fd5\p\lib\bz2.lib C$:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlienc.lib C$:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlidec.lib C$:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlicommon.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-window-s-d.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-main-d.lib C$:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-system-s-d.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc -fopenmp /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\lib\fmtd.lib  C:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-audio-s-d.lib  C:\Users\josue\.conan2\p\b\flac7bbe0d9471d59\p\lib\FLAC++.lib  C:\Users\josue\.conan2\p\b\flac7bbe0d9471d59\p\lib\FLAC.lib  C:\Users\josue\.conan2\p\b\opena96111ba1723d9\p\lib\OpenAL32.lib  ole32.lib  shell32.lib  user32.lib  C:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbisfile.lib  C:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbisenc.lib  C:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib\vorbis.lib  C:\Users\josue\.conan2\p\b\ogg9951fef9d6731\p\lib\ogg.lib  C:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-network-s-d.lib  ws2_32.lib  C:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-graphics-s-d.lib  C:\Users\josue\.conan2\p\b\freet2b86c301a62be\p\lib\freetyped.lib  C:\Users\josue\.conan2\p\b\libpnc034e3a817d1e\p\lib\libpng16_staticd.lib  C:\Users\josue\.conan2\p\b\zlib8a32b8641962a\p\lib\zlib.lib  C:\Users\josue\.conan2\p\b\bzip2d244b99275fd5\p\lib\bz2.lib  C:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlienc.lib  C:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlidec.lib  C:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib\brotlicommon.lib  C:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-window-s-d.lib  gdi32.lib  opengl32.lib  C:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-main-d.lib  C:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib\sfml-system-s-d.lib  winmm.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   LINK_PATH = -LIBPATH:C:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\sfmlba88fa549a970\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\flac7bbe0d9471d59\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\ogg9951fef9d6731\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\opena96111ba1723d9\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\vorbi0b1befa24b8a0\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\freet2b86c301a62be\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\libpnc034e3a817d1e\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\zlib8a32b8641962a\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\bzip2d244b99275fd5\p\lib   -LIBPATH:C:\Users\josue\.conan2\p\b\brotlbe04bb319f1d5\p\lib
-  OBJECT_DIR = CMakeFiles\Grupo1_pp.dir
+  OBJECT_DIR = CMakeFiles\Ejercicio1.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Grupo1_pp.dir\
-  TARGET_FILE = Grupo1_pp.exe
-  TARGET_IMPLIB = Grupo1_pp.lib
-  TARGET_PDB = Grupo1_pp.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\Ejercicio1.dir\
+  TARGET_FILE = Ejercicio1.exe
+  TARGET_IMPLIB = Ejercicio1.lib
+  TARGET_PDB = Ejercicio1.pdb
 
 # =============================================================================
-# Object build statements for EXECUTABLE target practica
+# Object build statements for EXECUTABLE target Ejercicio2
 
 
 #############################################
-# Order-only phony target for practica
+# Order-only phony target for Ejercicio2
 
-build cmake_object_order_depends_target_practica: phony || CMakeFiles\practica.dir
+build cmake_object_order_depends_target_Ejercicio2: phony || CMakeFiles\Ejercicio2.dir
 
-build CMakeFiles\practica.dir\practica.cpp.obj: CXX_COMPILER__practica_unscanned_Debug C$:\Users\josue\CLionProjects\Grupo1_pp\practica.cpp || cmake_object_order_depends_target_practica
+build CMakeFiles\Ejercicio2.dir\Ejercicio2.cpp.obj: CXX_COMPILER__Ejercicio2_unscanned_Debug C$:\Users\josue\CLionProjects\Grupo1_pp\Ejercicio2.cpp || cmake_object_order_depends_target_Ejercicio2
   FLAGS = /DWIN32 /D_WINDOWS /EHsc -fopenmp /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi
-  OBJECT_DIR = CMakeFiles\practica.dir
-  OBJECT_FILE_DIR = CMakeFiles\practica.dir
-  TARGET_COMPILE_PDB = CMakeFiles\practica.dir\
-  TARGET_PDB = practica.pdb
+  INCLUDES = -external:IC:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\include -external:W0
+  OBJECT_DIR = CMakeFiles\Ejercicio2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Ejercicio2.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Ejercicio2.dir\
+  TARGET_PDB = Ejercicio2.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target practica
+# Link build statements for EXECUTABLE target Ejercicio2
 
 
 #############################################
-# Link the executable practica.exe
+# Link the executable Ejercicio2.exe
 
-build practica.exe: CXX_EXECUTABLE_LINKER__practica_Debug CMakeFiles\practica.dir\practica.cpp.obj
+build Ejercicio2.exe: CXX_EXECUTABLE_LINKER__Ejercicio2_Debug CMakeFiles\Ejercicio2.dir\Ejercicio2.cpp.obj | C$:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\lib\fmtd.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc -fopenmp /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\practica.dir
+  LINK_LIBRARIES = C:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\lib\fmtd.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_PATH = -LIBPATH:C:\Users\josue\.conan2\p\b\fmtbc85ecb4e3306\p\lib
+  OBJECT_DIR = CMakeFiles\Ejercicio2.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\practica.dir\
-  TARGET_FILE = practica.exe
-  TARGET_IMPLIB = practica.lib
-  TARGET_PDB = practica.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\Ejercicio2.dir\
+  TARGET_FILE = Ejercicio2.exe
+  TARGET_IMPLIB = Ejercicio2.lib
+  TARGET_PDB = Ejercicio2.pdb
 
 
 #############################################
@@ -141,9 +143,9 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Grupo1_pp: phony Grupo1_pp.exe
+build Ejercicio1: phony Ejercicio1.exe
 
-build practica: phony practica.exe
+build Ejercicio2: phony Ejercicio2.exe
 
 # =============================================================================
 # Folder targets.
@@ -153,7 +155,7 @@ build practica: phony practica.exe
 #############################################
 # Folder: C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-debug
 
-build all: phony Grupo1_pp.exe practica.exe
+build all: phony Ejercicio1.exe Ejercicio2.exe
 
 # =============================================================================
 # Built-in targets

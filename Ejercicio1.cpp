@@ -4,7 +4,6 @@
 #include <random>
 #include <fmt/core.h>
 #include <fstream>
-#include <SFML/Graphics.hpp>
 #include <cmath>
 
 #include <chrono>
@@ -16,19 +15,6 @@ namespace ch=std::chrono;
 
 #define INTERVALO 30
 
-
-std::vector<int> randomicos(){
-    std::random_device rd;
-    std::default_random_engine gen(rd());
-    std::uniform_int_distribution<> dist(0,100);
-    std::vector<int> datos(MAX_NUMEROS);
-
-    for (int i = 0; i < MAX_NUMEROS; ++i) {
-        int x= dist(gen);
-        datos[i]=x;
-    }
-    return datos;
-}
 
 std::vector<int> read_file() {
     std::fstream fs("C:/Users/josue/Desktop/Universidad/ProgParalela/Grupal_final/numeros/datos4.txt", std::ios::in);
@@ -46,6 +32,7 @@ std::vector<int> frecuencias(const int *a, const int n){
 
     int block=std::ceil((double)255/GRUPOS);
     int contador=0;
+
     std::vector<int> datos (255);
     std::vector<int> datosFinal (GRUPOS);
 
@@ -156,35 +143,6 @@ std::vector<int> frecuenciasOMP2(const int *a, const int n, int intervalo) {
 }
 
 
-std::vector<int> frecuenciasOMP3(const int *a, const int n){
-    std::vector<int> datos (256);
-
-    #pragma omp parallel default(none) shared (a, n, datos)
-    {
-        std::vector<int> tmp_datos (256);
-
-        #pragma omp for
-        for (int i = 0; i <256 ; ++i) {
-            int tmp_contador=0;
-            for (int j = 0; j < n; ++j) {
-                if (i==a[j]){
-                    tmp_contador++;
-                }
-            }
-            tmp_datos[i]=tmp_contador;
-        }
-
-        #pragma omp critical
-        {
-            for (int i = 0; i < 256; i++) {
-                datos[i] +=  tmp_datos[i];
-            }
-        }
-    }
-
-    return datos;
-}
-
 int main() {
 
     std::vector<int> datosRandom=read_file();
@@ -230,18 +188,6 @@ int main() {
     auto end3 = std::chrono::high_resolution_clock::now();
     ch::duration<double, std::milli> tiempo3 = end3 - start3;
     fmt::println("Tiempo Paralelo: {}ms", tiempo3.count());
-
-
-
-    //GENERAR txt de datos
-//    std::ofstream archivo("C:\\Users\\josue\\Desktop\\Universidad\\ProgParalela\\Grupal_final\\numeros4.txt");
-//    for (int dato : datosRandom) {
-//        archivo << dato << std::endl;
-//    }
-//
-//    archivo.close();
-//    std::cout << "Datos guardados en datos.txt" << std::endl;
-
 
     return 0;
 }

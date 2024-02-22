@@ -10,7 +10,7 @@ namespace ch = std::chrono;
 
 
 std::vector<int> read_file() {
-    std::fstream fs("C:/Users/josue/Desktop/Universidad/ProgParalela/Grupal_final/numeros3.txt", std::ios::in);
+    std::fstream fs("C:/Users/josue/Desktop/Universidad/ProgParalela/Grupal_final/numeros4.txt", std::ios::in);
     std::string line;
     std::vector<int> ret;
     while (std::getline(fs, line)) {
@@ -23,7 +23,7 @@ std::vector<int> read_file() {
 std::vector<int> scanSerial(const std::vector<int>& a) {
     std::vector<int> salida(a.size());
 
-    // Inicializar el primer elemento del resultado con el primer elemento del input
+    // Inicializar el primer elemento de salida con el primer elemento del input
     salida[0] = a[0];
 
     // Calcular la suma acumulativa
@@ -35,31 +35,34 @@ std::vector<int> scanSerial(const std::vector<int>& a) {
 
 
 std::vector<int> scanParalelo(const std::vector<int>& a) {
-    int n = a.size();
-    std::vector<int> salida(n);
+    std::vector<int> salida(a.size());
 
-    // Inicializar el primer elemento del resultado con el primer elemento del input
+    // Inicializar el primer elemento de salida con el primer elemento del input
     salida[0] = a[0];
 
     // Calcular la suma acumulativa (paralelo)
-    #pragma omp parallel for
-    for (int i = 1; i < n; ++i) {
-        salida[i] = salida[i - 1] + a[i];
+    #pragma omp parallel default(none) shared(a, salida)
+    {
+        #pragma omp parallel for
+        for (int i = 1; i < a.size(); ++i) {
+            salida[i] = salida[i - 1] + a[i];
+        }
+
     }
 
     return salida;
 }
 
 int main() {
-    std::vector<int> datos = {10, 20, 10, 5, 15,10,5,15};
-    //std::vector<int> datos = read_file();
+    //std::vector<int> datos = {10, 20, 10, 5, 15,10,5,15};
+    std::vector<int> datos = read_file();
 
     fmt::println("VERSION SERIAL");
     auto start = ch::high_resolution_clock::now();
 
     std::vector<int> nuevo =scanSerial(datos);
-    fmt::println("Entrada: {}", datos);
-    fmt::println("Salida: {}", nuevo);
+    //fmt::println("Entrada: {}", datos);
+    //fmt::println("Salida: {}", nuevo);
 
     auto end = ch::high_resolution_clock::now();
     ch::duration<double, std::milli> tiempo = end - start;
@@ -71,8 +74,8 @@ int main() {
     auto start1 = ch::high_resolution_clock::now();
 
     std::vector<int> nuevo1 =scanParalelo(datos);
-    fmt::println("Entrada: {}", datos);
-    fmt::println("Salida: {}", nuevo1);
+    //fmt::println("Entrada: {}", datos);
+    //fmt::println("Salida: {}", nuevo1);
 
     auto end1 = ch::high_resolution_clock::now();
     ch::duration<double, std::milli> tiempo1 = end1 - start1;

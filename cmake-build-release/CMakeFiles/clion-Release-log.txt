@@ -1,4 +1,16 @@
-"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake -G Ninja -S C:\Users\josue\CLionProjects\Grupo1_pp -B C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release
+"C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.3.4/bin/ninja/win/x64/ninja.exe" -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake -G Ninja -S C:\Users\josue\CLionProjects\Grupo1_pp -B C:\Users\josue\CLionProjects\Grupo1_pp\cmake-build-release
+-- The C compiler identification is MSVC 19.38.33135.0
+-- The CXX compiler identification is MSVC 19.38.33135.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- CMake-Conan: first find_package() found. Installing dependencies with Conan
 -- CMake-Conan: Checking if a default profile exists
 C:\Users\josue\.conan2\profiles\default
@@ -113,9 +125,9 @@ vorbis/1.3.7: Already installed! (10 of 12)
 freetype/2.13.2: Already installed! (11 of 12)
 sfml/2.6.1: Already installed! (12 of 12)
 WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
-WARN: deprecated:     'cpp_info.names' used in: flac/1.4.3, freetype/2.13.2, ogg/1.3.5, openal-soft/1.22.2, bzip2/1.0.8, libpng/1.6.42, vorbis/1.3.7, sfml/2.6.1, brotli/1.1.0, zlib/1.3.1, fmt/10.2.1
-WARN: deprecated:     'cpp_info.build_modules' used in: bzip2/1.0.8, freetype/2.13.2, sfml/2.6.1, openal-soft/1.22.2
-WARN: deprecated:     'env_info' used in: bzip2/1.0.8, freetype/2.13.2, flac/1.4.3
+WARN: deprecated:     'cpp_info.names' used in: flac/1.4.3, ogg/1.3.5, libpng/1.6.42, vorbis/1.3.7, zlib/1.3.1, sfml/2.6.1, fmt/10.2.1, brotli/1.1.0, freetype/2.13.2, openal-soft/1.22.2, bzip2/1.0.8
+WARN: deprecated:     'cpp_info.build_modules' used in: openal-soft/1.22.2, sfml/2.6.1, bzip2/1.0.8, freetype/2.13.2
+WARN: deprecated:     'env_info' used in: flac/1.4.3, bzip2/1.0.8, freetype/2.13.2
 WARN: deprecated:     'cpp_info.filenames' used in: flac/1.4.3, freetype/2.13.2, opengl/system
 WARN: deprecated:     'user_info' used in: freetype/2.13.2
 
@@ -179,6 +191,6 @@ Install finished successfully
 -- Conan: Component target declared 'vorbis::vorbisenc-alias'
 -- Conan: Component target declared 'vorbis::vorbisfile-alias'
 -- Conan: Target declared 'vorbis::vorbis'
--- Configuring done (2.3s)
+-- Configuring done (5.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/josue/CLionProjects/Grupo1_pp/cmake-build-release
